@@ -55,7 +55,12 @@ class FlappyGame(GameApp):
                 self.dot.jump()
 
 class PillarPair(Sprite):
-    pass
+    def init_element(self):
+        self.is_started = True
+
+    def update(self):
+        if self.is_started:
+            self.x -= 15
 
 if __name__ == "__main__":
     root = tk.Tk()
