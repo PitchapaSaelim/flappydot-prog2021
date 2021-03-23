@@ -32,6 +32,7 @@ class FlappyGame(GameApp):
 
     def init_game(self):
         self.create_sprites()
+        self.is_started = False
 
     def pre_update(self):
         pass
