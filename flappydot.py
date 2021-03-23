@@ -51,6 +51,7 @@ class FlappyGame(GameApp):
             if not self.is_started:
                 self.is_started = True
                 self.dot.start()
+                self.pillar_pair.start()
             if self.is_started:
                 self.dot.jump()
 
@@ -61,7 +62,11 @@ class PillarPair(Sprite):
     def update(self):
         if self.is_started:
             self.x -= 15
+        if self.x <= -30 and self.is_started:
+            self.x = CANVAS_WIDTH
 
+    def start(self):
+        self.is_started = True
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("Flappy Dot Game")
