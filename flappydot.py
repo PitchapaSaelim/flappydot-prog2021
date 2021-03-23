@@ -55,7 +55,7 @@ class FlappyGame(GameApp):
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.title("Monkey Banana Game")
+    root.title("Flappy Dot Game")
 
     # do not allow window resizing
     root.resizable(False, False)
