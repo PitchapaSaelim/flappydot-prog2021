@@ -57,7 +57,7 @@ class FlappyGame(GameApp):
 
 class PillarPair(Sprite):
     def init_element(self):
-        self.is_started = True
+        self.is_started = False
 
     def update(self):
         if self.is_started:
